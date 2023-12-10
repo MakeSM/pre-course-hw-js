@@ -26,5 +26,5 @@ function deepCopy(obj) {
 let passportCopy = deepCopy(passportWithAddress);
 passportCopy.address.city = 'Bobryisk';
 
-console.log(passportCopy.address.city);
 console.log(passportWithAddress.address.city);
+console.log(passportCopy.address.city);
