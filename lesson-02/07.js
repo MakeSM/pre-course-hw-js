@@ -1,4 +1,4 @@
-let passportMarried1 = {
+let passportMarried = {
    name: 'Petr',
    surname: 'Petrov',
    address: {
@@ -16,6 +16,7 @@ let passportMarried2 = {
       city: 'Bobryisk',
    },
 };
+passportMarried2.married = true;
 
-console.log(passportMarried1);
+console.log(passportMarried);
 console.log(passportMarried2);
