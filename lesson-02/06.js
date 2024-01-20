@@ -7,24 +7,9 @@ let passportWithAddress = {
    },
 };
 
-function deepCopy(obj) {
-   if (obj === null || typeof obj !== 'object') {
-      return obj;
-   }
+let copyPassportWithAddress = JSON.parse(JSON.stringify(passportWithAddress));
 
-   let clone = Array.isArray(obj) ? [] : {};
-
-   for (let key in obj) {
-      if (Object.prototype.hasOwnProperty.call(obj, key)) {
-         clone[key] = deepCopy(obj[key]);
-      }
-   }
-
-   return clone;
-}
-
-let passportCopy = deepCopy(passportWithAddress);
-passportCopy.address.city = 'Bobryisk';
+copyPassportWithAddress.address.city = 'Bobryisk';
 
 console.log(passportWithAddress.address.city);
-console.log(passportCopy.address.city);
+console.log(copyPassportWithAddress.address.city);
